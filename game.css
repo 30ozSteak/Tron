@@ -1,5 +1,17 @@
+*{
+  background-color: rgb(36, 36, 36);
+  color: white;
+  text-align: center;
+}
+
 #game {
   border: 1px dashed;
   margin: auto;
   display: block;
+  background:url(../img/)
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 19rem 50rem 19rem;
 }

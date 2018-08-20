@@ -6,7 +6,26 @@
   <link href='./game.css' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-  <canvas id="game" width="700" height="700"></canvas>
+  <h1>Hey, it's Tron</h1>
+  <container class="main">
+    <section class="left-side">
+      <h3 class="player1">
+        Player 1
+      </h3>
+      <h4 class="p1score score">
+        Score: <span class="score-actual">0</span>
+      </h4>
+    </section>
+    <canvas id="game" width="600" height="600"></canvas>
+    <section class="right-side">
+            <h3 class="player2">
+        Player 2
+      </h3>
+      <h4 class="p2score score">
+          Score: <span class="score-actual">0</span>
+      </h4>
+    </section>
+  </container>
   <script src="main.bundle.js"></script>
 </body>
 </html>
