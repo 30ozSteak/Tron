@@ -4,8 +4,8 @@ const Game = require('../lib/Game');
 
 const ctx = {
   canvas: {
-    width: 500,
-    height: 500
+    width: 700,
+    height: 700
   }
 }
 
