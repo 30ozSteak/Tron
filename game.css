@@ -26,6 +26,38 @@ body {
   background: linear-gradient(rgba(0, 247, 255, 0.041), rgba(0, 225, 255, 0.233)),
   center / cover url(./lib/img/tronpaper.png);
   transition: 10s;
+  position: relative;
+}
+
+.welcome-screen{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.815);
+  height: 599px;
+  width: 600px;
+  left: 26.25rem;
+  top: 7.6rem;
+  font-family: 'Roboto', sans-serif;
+  visibility: show;
+}
+
+.hide {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+#reset{
+  display: none;
+}
+
+.welcome-screen p{
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  visibility: show
 }
 
 .main{
@@ -98,3 +130,4 @@ ul li:hover{
   filter: brightness(150%);
   cursor: pointer;
 }
+
