@@ -27,7 +27,6 @@ body {
   transition: 10s;
 }
 
-
 .main{
   display: grid;
   grid-template-columns: 1fr 40rem 1fr;
