@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Game Time</title>
-  <link href='./game.css' rel='stylesheet' type='text/css'/>
+  <link href='./game.css' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
 </head>
+
 <body>
   <h1>Tron</h1>
   <container class="main">
@@ -13,22 +18,31 @@
         Player 1
       </h3>
       <h4 class="p1score score">
-        Score: <span class="score-actual">0</span>
+        Score:
+        <span class="score-actual">0</span>
       </h4>
     </section>
     <section class="middle-side">
       <canvas id="game" width="600" height="600"></canvas>
-      <p>Made with ❤️ Nick Dambrosio</p>
+      <p>Made with
+        <i class="far fa-heart"></i> Nick Dambrosio</p>
+      <p>
+        <a href="https://30ozsteak.github.io/portfolio/">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
     </section>
     <section class="right-side">
-            <h3 class="player2">
+      <h3 class="player2">
         Player 2
       </h3>
       <h4 class="p2score score">
-          Score: <span class="score-actual">0</span>
+        Score:
+        <span class="score-actual">0</span>
       </h4>
     </section>
   </container>
   <script src="main.bundle.js"></script>
 </body>
+
 </html>
