@@ -44,12 +44,12 @@ body {
 }
 
 .shown {
-  display: block;
+  display: inline-block !important;
 }
 
-/* #reset{
+#reset{
   display: none;
-} */
+}
 
 .welcome-screen p{
   font-family: 'Roboto', sans-serif;
@@ -92,6 +92,11 @@ p{
   color: gray;
   font-size: 2rem;
   padding-bottom: 2rem;
+}
+
+.score, .score span{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
 }
 
 .fa-github:hover{
