@@ -39,16 +39,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#start{
+  visibility: show;
+}
+
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 .shown {
-  display: inline-block !important;
-}
-
-#reset{
-  display: none;
+  visibility: show;
 }
 
 .welcome-screen p{
@@ -99,6 +99,27 @@ p{
   font-size: 2rem;
 }
 
+
+ul{
+  margin-bottom: 3.5rem;
+}
+
+ul li{
+  display: inline;
+  padding: 0 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+ul li:hover{
+  filter: brightness(150%);
+  cursor: pointer;
+}
+
+
+/* Silly magic */
+
 .fa-github:hover{
   animation: 🦄 2s linear infinite;
   color: rgb(255, 111, 255);
@@ -115,24 +136,6 @@ p{
   100% {
     filter: hue-rotate(-90deg);
   }
-}
-
-ul{
-  margin-bottom: 3.5rem;
-}
-
-ul li{
-  display: inline;
-  padding: 0 3rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-
-}
-
-ul li:hover{
-  filter: brightness(150%);
-  cursor: pointer;
 }
 
 .fa-caret-right{
