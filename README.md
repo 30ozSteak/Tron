@@ -33,4 +33,5 @@ After not being able to figure out why my tails weren't appearing on the screen,
 
 I've got tails now! but don't have the collision on them working....
 
+<img width="1440" alt="screen shot 2018-08-21 at 3 16 34 pm" src="https://user-images.githubusercontent.com/34214595/44429655-60d25380-a555-11e8-9a38-0ef919722f7d.png">
 
