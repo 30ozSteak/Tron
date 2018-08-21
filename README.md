@@ -24,6 +24,11 @@ After finally diving into the code, I noticed that the starter-kit we received h
 
 ### V.06 'What if you just delete that code right there'
 
+
+After not being able to figure out why my tails weren't appearing on the screen, despite pushing into the array, I reached out to a classmate. Turns out I kept the starter-kit's 'clearRect' call. Once removing that the tails appeared just fine. MADNESS. 
+
+# Progress Screenshots
+
 <img width="1437" alt="screen shot 2018-08-21 at 1 46 39 pm" src="https://user-images.githubusercontent.com/34214595/44425333-c66c1300-a548-11e8-8b95-829149c8cf44.png">
 
 
