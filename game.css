@@ -14,7 +14,8 @@
 }
 
 body {
-  background: linear-gradient(rgb(36, 36, 36), rgb(29, 29, 29))
+  background: linear-gradient(rgba(36, 36, 36, 0.589), rgba(29, 29, 29, 0.281)),
+  center / cover url(./lib/img/tronpaper.jpg);
 }
 
 
@@ -25,8 +26,39 @@ body {
   background: linear-gradient(rgba(0, 247, 255, 0.041), rgba(0, 225, 255, 0.233)),
   center / cover url(./lib/img/tronpaper.png);
   transition: 10s;
+  position: relative;
 }
 
+.welcome-screen{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.815);
+  height: 599px;
+  width: 600px;
+  left: 26.25rem;
+  top: 7.6rem;
+  font-family: 'Roboto', sans-serif;
+  visibility: show;
+}
+
+.hide {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+#reset{
+  display: none;
+}
+
+.welcome-screen p{
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  visibility: show
+}
 
 .main{
   display: grid;
@@ -80,3 +112,22 @@ p{
     filter: hue-rotate(-90deg);
   }
 }
+
+ul{
+  margin-bottom: 3.5rem;
+}
+
+ul li{
+  display: inline;
+  padding: 0 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+}
+
+ul li:hover{
+  filter: brightness(150%);
+  cursor: pointer;
+}
+
