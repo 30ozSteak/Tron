@@ -47,9 +47,9 @@ body {
   display: block;
 }
 
-#reset{
+/* #reset{
   display: none;
-}
+} */
 
 .welcome-screen p{
   font-family: 'Roboto', sans-serif;
