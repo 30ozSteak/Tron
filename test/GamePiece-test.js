@@ -50,20 +50,20 @@ describe('GamePiece', () => {
   it('should be able to move', () => {
     gamepiece.move({dx: 1, dy: 1});
 
-    assert.equal(gamepiece.dx, 1)
+    assert.equal(gamepiece.dx, 1);
   });
 
   it('should be able to change direction', () => {
     gamepiece.move({dx: 0, dy: 0});
-    gamepiece.changeDirection({dx: 0, dy:1})
+    gamepiece.changeDirection({dx: 0, dy: 1});
     assert.equal(gamepiece.dy, 1);
-  })
+  });
 
   it('shouldnt be able to drive backwards on itself', () => {
     gamepiece.move({dx: 1, dy: 0});
     gamepiece.changeDirection({dx: -1, dy: 0});
-    gamepiece.preventDrivingBackwards({dx: 1, dy: 0})
+    gamepiece.preventDrivingBackwards({dx: 1, dy: 0});
     
     assert.equal(gamepiece.dx, 1);
-  })
+  });
 });
