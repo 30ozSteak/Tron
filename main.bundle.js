@@ -466,9 +466,6 @@ function gameLoop() {
 
   if (game.endRound()) {
     alert('Game Over');
-    // create a dropdown/popup that appears, 
-    // one player loses a life
-    //  restarts animation loop on click
   } else {
     game.animate();
   }
