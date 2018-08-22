@@ -62,7 +62,7 @@
       "error",
       "always"
     ],
-    "space-before-blocks": [
+    "space-before-players": [
       "error", {
         "functions": "always",
         "keywords": "always",
