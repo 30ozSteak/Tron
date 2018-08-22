@@ -1,6 +1,5 @@
-# Game Time Starter Kit (FE - Module 2)
-
 # Tron (Dancing With Myself)
+(nick dambrosio)
 
 ## Goals 
 Use OOP to drive the design of an HTML5 Canvas game. 
@@ -35,3 +34,8 @@ I've got tails now! but don't have the collision on them working....
 
 <img width="1440" alt="screen shot 2018-08-21 at 3 16 34 pm" src="https://user-images.githubusercontent.com/34214595/44429655-60d25380-a555-11e8-9a38-0ef919722f7d.png">
 
+# V.08 'Oh yeah, tests'
+
+With the core functionality of my game finally working as intended, collision detection finally working on the walls, tails, and blocks, linter showing zero errors, and a clean CSS file, I actually see a light at the end of the tunnel. Now to get all my tests passing, get the project management details posted, and GET SOME SLEEP
+
+<img width="1436" alt="screen shot 2018-08-21 at 11 44 37 pm" src="https://user-images.githubusercontent.com/34214595/44444895-42dc1180-a59c-11e8-8e22-f748bf92ebdb.png">
