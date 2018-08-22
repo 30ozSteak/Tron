@@ -1,14 +1,6 @@
 const { assert } = require('chai');
 const GamePiece = require('../lib/GamePiece.js');
-const Game = require('../lib/Game.js');
-const Tail = require('../lib/Tail.js');
 
-const ctx = {
-  canvas: {
-    width: 600,
-    height: 600
-  }
-};
 
 describe('GamePiece', () => {
   let gamepiece;
@@ -39,7 +31,7 @@ describe('GamePiece', () => {
     assert.isTrue(colliding);
   });
 
-  it('should not collide with a second gamepiece that does not occupy the same space', () => {
+  it('should not collide with a second gamepiece nowhere near it', () => {
     const gamepiece2 = new GamePiece(130, 130, 10, 10, 'blue');
 
     const colliding = gamepiece.isCollidingWith(gamepiece2);
@@ -48,6 +40,7 @@ describe('GamePiece', () => {
   });
 
   it('should not be able to collide with wall', () =>  {
+    
     const gamepiece = new GamePiece(700, 700, 10, 10, 'blue');
     const isColliding = gamepiece.isCollidingWithWall(700, 700);
 
@@ -69,7 +62,7 @@ describe('GamePiece', () => {
   it('shouldnt be able to drive backwards on itself', () => {
     gamepiece.move({dx: 1, dy: 0});
     gamepiece.changeDirection({dx: -1, dy: 0});
-    gamepiece.preventDrivingBackwards({dx: -1, dy: 0})
+    gamepiece.preventDrivingBackwards({dx: 1, dy: 0})
     
     assert.equal(gamepiece.dx, 1);
   })
