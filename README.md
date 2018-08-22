@@ -36,6 +36,6 @@ I've got tails now! but don't have the collision on them working....
 
 # V.08 'Oh yeah, tests'
 
-With the core functionality of my game finally working as intended, collision detection finally working on the walls, tails, and blocks, linter showing zero errors, and a clean CSS file, I actually see a light at the end of the tunnel. Now to get all my tests passing, get the project management details posted, and GET SOME SLEEP
+With the core functionality of my game finally working as intended, collision detection finally working on the walls, tails, and players, linter showing zero errors, and a clean CSS file, I actually see a light at the end of the tunnel. Now to get all my tests passing, get the project management details posted, and GET SOME SLEEP
 
 <img width="1436" alt="screen shot 2018-08-21 at 11 44 37 pm" src="https://user-images.githubusercontent.com/34214595/44444895-42dc1180-a59c-11e8-8e22-f748bf92ebdb.png">

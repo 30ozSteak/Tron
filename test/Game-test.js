@@ -23,34 +23,34 @@ describe('Game', () => {
     assert.equal(game.gameOver, false);
     assert.equal(game.lives, 3);
     assert.equal(game.paused, false);
-    assert.equal(game.blocks.length[2]);
+    assert.equal(game.players.length[2]);
   });
 
-  it('should end the game if block collides with wall', () =>  {
+  it('should end the game if player collides with wall', () =>  {
 
-    const block = game.blocks[0];
+    const player = game.players[0];
 
-    block.x = ctx.canvas.width;
-    block.isCollidingWithWall(ctx.canvas.width, ctx.canvas.height);
+    player.x = ctx.canvas.width;
+    player.isCollidingWithWall(ctx.canvas.width, ctx.canvas.height);
     assert.isFalse(game.gameOver);
   });
 
   it('should lose a life if any collision occurs', () => {
 
-    const block = game.blocks[0];
-    const block2 = game.blocks[1];
+    const player = game.players[0];
+    const block2 = game.players[1];
 
-    block.isCollidingWith(block2);
-    block.lives--;
-    assert.equal(block.lives, 2);
+    player.isCollidingWith(block2);
+    player.lives--;
+    assert.equal(player.lives, 2);
   });
 
-  it('should end game if block collides with another block', () =>  {
+  it('should end game if player collides with another player', () =>  {
 
-    const block = game.blocks[0];
-    const block2 = game.blocks[1];
+    const player = game.players[0];
+    const block2 = game.players[1];
 
-    block.isCollidingWith(block2);
+    player.isCollidingWith(block2);
     assert.isFalse(game.gameOver);
   });
 
@@ -59,9 +59,9 @@ describe('Game', () => {
     assert.equal(game.tail.length >= 1, true);
   });
 
-  it('should load the game with two blocks', () => {
+  it('should load the game with two players', () => {
     
-    assert.equal(game.blocks.length[2]);
+    assert.equal(game.players.length[2]);
   });
 
 });

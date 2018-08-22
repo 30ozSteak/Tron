@@ -27,7 +27,7 @@ body {
   background: linear-gradient(rgba(0, 247, 255, 0.041), rgba(0, 225, 255, 0.233)),
   center / cover url(./lib/img/tronpaper.png);
   border: 1px solid;
-  display: block;
+  display: player;
   margin: auto;
   position: relative;
   transition: 10s;

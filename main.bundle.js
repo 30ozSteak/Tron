@@ -86,9 +86,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./lib/Block.js":
+/***/ "./lib/Player.js":
 /*!**********************!*\
-  !*** ./lib/Block.js ***!
+  !*** ./lib/Player.js ***!
   \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -105,19 +105,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var GamePiece = __webpack_require__(/*! ./GamePiece */ "./lib/GamePiece.js");
 
 module.exports = function (_GamePiece) {
-  _inherits(Block, _GamePiece);
+  _inherits(Player, _GamePiece);
 
-  function Block(x, y, height, width, color, dx) {
-    _classCallCheck(this, Block);
+  function Player(x, y, height, width, color, dx) {
+    _classCallCheck(this, Player);
 
-    var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, x, y, height, width, color, dx));
+    var _this = _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this, x, y, height, width, color, dx));
 
     _this.dx = dx;
     _this.lives = 3;
     return _this;
   }
 
-  return Block;
+  return Player;
 }(GamePiece);
 
 /***/ }),
@@ -136,7 +136,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Block = __webpack_require__(/*! ./Block */ "./lib/Block.js");
+var Player = __webpack_require__(/*! ./Player */ "./lib/Player.js");
 var Tail = __webpack_require__(/*! ./Tail */ "./lib/Tail.js");
 
 module.exports = function () {
@@ -148,7 +148,7 @@ module.exports = function () {
     this.lives = 3;
     this.paused = false;
     this.tail = [1];
-    this.blocks = [new Block(20, 270, 10, 10, 'rgb(255, 255, 81)', 1, 0), new Block(580, 270, 10, 10, 'rgb(0, 153, 255)', -1, 0)];
+    this.players = [new Player(20, 270, 10, 10, 'rgb(255, 255, 81)', 1, 0), new Player(580, 270, 10, 10, 'rgb(0, 153, 255)', -1, 0)];
   }
 
   _createClass(Game, [{
@@ -166,31 +166,31 @@ module.exports = function () {
     value: function animate() {
       var _this = this;
 
-      this.blocks.forEach(function (block) {
+      this.players.forEach(function (player) {
 
-        _this.tail.push(new Tail(block.x, block.y, block.height, block.width, block.color));
+        _this.tail.push(new Tail(player.x, player.y, player.height, player.width, player.color));
 
-        _this.metaPlayer(block);
-        block.draw(_this.ctx);
+        _this.metaPlayer(player);
+        player.draw(_this.ctx);
       });
     }
   }, {
     key: 'metaPlayer',
-    value: function metaPlayer(block) {
+    value: function metaPlayer(player) {
       var canvas = this.ctx.canvas;
 
 
-      if (block.isCollidingWithWall(canvas.width, canvas.height)) {
-        block.lives--;
+      if (player.isCollidingWithWall(canvas.width, canvas.height)) {
+        player.lives--;
         this.handleGameOver();
-      } else if (this.blocks[0].isCollidingWith(this.blocks[1])) {
-        block.lives--;
+      } else if (this.players[0].isCollidingWith(this.players[1])) {
+        player.lives--;
         this.handleGameOver();
-      } else if (block.isCollidingWithTail(this.tail)) {
-        block.lives--;
+      } else if (player.isCollidingWithTail(this.tail)) {
+        player.lives--;
         this.handleGameOver();
       } else {
-        block.move();
+        player.move();
       }
     }
   }, {
@@ -203,28 +203,28 @@ module.exports = function () {
 
       if (e.key === 'ArrowUp') {
         direction.dy = -1;
-        this.blocks[1].changeDirection(direction);
+        this.players[1].changeDirection(direction);
       } else if (e.key === 'ArrowDown') {
         direction.dy = 1;
-        this.blocks[1].changeDirection(direction);
+        this.players[1].changeDirection(direction);
       } else if (e.key === 'ArrowLeft') {
         direction.dx = -1;
-        this.blocks[1].changeDirection(direction);
+        this.players[1].changeDirection(direction);
       } else if (e.key === 'ArrowRight') {
         direction.dx = 1;
-        this.blocks[1].changeDirection(direction);
+        this.players[1].changeDirection(direction);
       } else if (e.key === 'w') {
         direction.dy = -1;
-        this.blocks[0].changeDirection(direction);
+        this.players[0].changeDirection(direction);
       } else if (e.key === 'a') {
         direction.dx = -1;
-        this.blocks[0].changeDirection(direction);
+        this.players[0].changeDirection(direction);
       } else if (e.key === 's') {
         direction.dy = 1;
-        this.blocks[0].changeDirection(direction);
+        this.players[0].changeDirection(direction);
       } else if (e.key === 'd') {
         direction.dx = 1;
-        this.blocks[0].changeDirection(direction);
+        this.players[0].changeDirection(direction);
       }
     }
   }]);
@@ -470,16 +470,16 @@ document.getElementById('reset').addEventListener('click', function () {
 
 var resetGame = function resetGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  game.blocks[0].x = 20;
-  game.blocks[1].x = 580;
-  game.blocks[0].y = 270;
-  game.blocks[1].y = 270;
-  game.blocks[0].dx = 1;
-  game.blocks[1].dx = -1;
-  game.blocks[0].dy = 0;
-  game.blocks[1].dy = 0;
-  game.blocks[1].dxv = 2;
-  game.block;
+  game.players[0].x = 20;
+  game.players[1].x = 580;
+  game.players[0].y = 270;
+  game.players[1].y = 270;
+  game.players[0].dx = 1;
+  game.players[1].dx = -1;
+  game.players[0].dy = 0;
+  game.players[1].dy = 0;
+  game.players[1].dxv = 2;
+  game.player;
   game.gameOver = false;
   game.tail = [];
 };
