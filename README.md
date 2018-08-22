@@ -25,7 +25,7 @@ After finally diving into the code, I noticed that the starter-kit we received h
 # V.06 'What if you just delete that code right there'
 
 
-After not being able to figure out why my tails weren't appearing on the screen, despite pushing into the array, I reached out to a classmate. Turns out I kept the starter-kit's 'clearRect' call. Once removing that the tails appeared just fine. MADNESS. 
+After not being able to figure out why my tails weren't appearing on the screen, despite unshifting into the array, I reached out to a classmate. Turns out I kept the starter-kit's 'clearRect' call. Once removing that the tails appeared just fine. MADNESS. 
 
 #### Progress Screenshots
 
