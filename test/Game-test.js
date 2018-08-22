@@ -54,15 +54,6 @@ describe('Game', () => {
     assert.isFalse(game.gameOver);
   });
 
-  it.skip('should end game if block collides with a tail', () => {
-
-    const block = game.blocks[0];
-    const block2 = game.blocks[1];
-
-    block.isCollidingWithTail(block2);
-    assert.isTrue(game.gameOver);
-  });
-
   it('should populate the tail array as the game progresses', () => {
     
     assert.equal(game.tail.length >= 1, true);
