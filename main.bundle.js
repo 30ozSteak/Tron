@@ -308,13 +308,13 @@ module.exports = function () {
       yellowTail.pop();
       blueTail.pop();
 
-      if (this.coordinateCheck(blueTail) || this.coordinateCheck(yellowTail)) {
+      if (this.colorChecker(blueTail) || this.colorChecker(yellowTail)) {
         return true;
       }
     }
   }, {
-    key: 'coordinateCheck',
-    value: function coordinateCheck(tails) {
+    key: 'colorChecker',
+    value: function colorChecker(tails) {
       var _this = this;
 
       var collide = false;

@@ -4,13 +4,13 @@
 }
 
 *{
-  color: rgb(0, 204, 255);
-  text-align: center;
-  font-family: tron;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  color: rgb(0, 204, 255);
+  font-family: tron;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
 }
 
 body {
@@ -18,25 +18,21 @@ body {
   center / cover url(./lib/img/tronpaper.jpg);
 }
 
-#game {
-  border: 1px solid;
-  margin: auto;
-  display: block;
-  background: linear-gradient(rgba(0, 247, 255, 0.041), rgba(0, 225, 255, 0.233)),
-  center / cover url(./lib/img/tronpaper.png);
-  transition: 10s;
-  position: relative;
+.main{
+  display: grid;
+  grid-template-columns: 1fr 40rem 1fr;
 }
 
-.welcome-screen{
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.815);
-  height: 599px;
-  width: 600px;
-  left: 26.25rem;
-  top: 7.6rem;
-  font-family: 'Roboto', sans-serif;
+#game {
+  background: linear-gradient(rgba(0, 247, 255, 0.041), rgba(0, 225, 255, 0.233)),
+  center / cover url(./lib/img/tronpaper.png);
+  border: 1px solid;
+  display: block;
+  margin: auto;
+  position: relative;
+  transition: 10s;
 }
+
 
 #start{
   visibility: show;
@@ -50,25 +46,48 @@ body {
   visibility: show;
 }
 
+
+.welcome-screen{
+  background-color: rgba(0, 0, 0, 0.815);
+  font-family: 'Roboto', sans-serif;
+  height: 599px;
+  left: 26.25rem;
+  position: absolute;
+  top: 7.6rem;
+  width: 600px;
+}
+
 .welcome-screen p{
   font-family: 'Roboto', sans-serif;
-  padding: 2rem;
-  margin-top: 2rem;
   font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem;
   visibility: show
 }
 
-.main{
-  display: grid;
-  grid-template-columns: 1fr 40rem 1fr;
+.game-over-screen{
+  background-color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  height: 599px;
+  left: 26.25rem;
+  position: absolute;
+  top: 7.6rem;
+  visibility: hidden;
+  width: 600px;
+}
+
+.game-over-screen p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  padding-top: 10rem;
 }
 
 h1 {
-  position: relative;
-  z-index: 5;
   font-size: 3rem;
   margin: 1rem 0;
+  position: relative;
   text-decoration: underline;
+  z-index: 5;
 }
 
 h3{
@@ -80,17 +99,11 @@ h3{
 };
 
 p{
+  color: gray;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   font-size: 1rem;
   letter-spacing: .5rem;
-  color: gray;
-}
-
-.fa-github{
-  color: gray;
-  font-size: 2rem;
-  padding-bottom: 2rem;
 }
 
 .score, .score span{
@@ -115,25 +128,6 @@ ul li:hover{
   cursor: pointer;
 }
 
-/* Silly magic */
-
-.fa-github:hover{
-  animation: 🦄 2s linear infinite;
-  color: rgb(255, 111, 255);
-  cursor: pointer;
-}
-
-@keyframes 🦄 {
-  0% {
-    filter: hue-rotate(-90deg);
-  }
-  50% {
-    filter: hue-rotate(90deg);
-  }
-  100% {
-    filter: hue-rotate(-90deg);
-  }
-}
 
 .fa-caret-right{
   padding-right: .5rem;
