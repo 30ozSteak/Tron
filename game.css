@@ -33,7 +33,6 @@ body {
   transition: 10s;
 }
 
-
 #start{
   visibility: show;
 }
@@ -43,9 +42,8 @@ body {
 }
 
 .shown {
-  visibility: show;
+  visibility: visible !important;
 }
-
 
 .welcome-screen{
   background-color: rgba(0, 0, 0, 0.815);
@@ -62,7 +60,7 @@ body {
   font-size: 1.5rem;
   margin-top: 2rem;
   padding: 2rem;
-  visibility: show
+  visibility: show;
 }
 
 .game-over-screen{
@@ -74,12 +72,15 @@ body {
   top: 7.6rem;
   visibility: hidden;
   width: 600px;
+  z-index: 2;
 }
+
 
 .game-over-screen p{
   font-family: 'Roboto', sans-serif;
   font-size: 4rem;
   padding-top: 10rem;
+  cursor: pointer;
 }
 
 h1 {
