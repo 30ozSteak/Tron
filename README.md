@@ -39,3 +39,7 @@ I've got tails now! but don't have the collision on them working....
 With the core functionality of my game finally working as intended, collision detection finally working on the walls, tails, and players, linter showing zero errors, and a clean CSS file, I actually see a light at the end of the tunnel. Now to get all my tests passing, get the project management details posted, and GET SOME SLEEP
 
 <img width="1436" alt="screen shot 2018-08-21 at 11 44 37 pm" src="https://user-images.githubusercontent.com/34214595/44444895-42dc1180-a59c-11e8-8e22-f748bf92ebdb.png">
+
+# V1 'The World'
+![ezgif com-optimize 1](https://user-images.githubusercontent.com/34214595/44486327-7f495500-a610-11e8-9592-7f47a6b03e6c.gif)
+
