@@ -1,6 +1,5 @@
 # Tron (Dancing With Myself)
 (nick dambrosio)
-https://medium.com/@ndambro303/building-tron-in-javascript-with-oop-progress-reports-6e9eb3a26676
 
 ## Goals 
 Use OOP to drive the design of an HTML5 Canvas game. 
